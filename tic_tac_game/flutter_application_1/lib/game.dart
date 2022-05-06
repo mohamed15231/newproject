@@ -120,68 +120,68 @@ class game {
     play(index, activePlayer);
   }
 
-  static Future<int> minimax(int depth, bool isMaximizing, {bool isfirst = true}) async {
-    int result;
-    bool empty=false;
-
-    if (checkWinner(player.playerXMax, player.playerOMax) ==
-        "player X is Winner") {
-      result = 2;
-    } else if (checkWinner(player.playerXMax, player.playerOMax) ==
-        "player O is Winner") {
-      result = -2;
-    } else if (checkWinner(player.playerXMax, player.playerOMax) =="tie") {
-      result = 0;
-    } else {
-      result = 1;
-    }
-
-    if (result != 1 || depth == 0) {
-      return result;
-    }
-    if (isMaximizing) {
-      int finalScore = -10;
-      for (int i = 0; i < 9; i++) {
-        if (!(player.playerOMax.contains(i) || player.playerXMax.contains(i))) {
-          player.playerXMax.add(i);
-
-          int score = await minimax(depth - 1, false, isfirst: false);
-
-           player.playerXMax.removeLast();
-
-
-          if (score > finalScore) {
-            finalScore = score;
-          }
-
-          if (isfirst) {
-            print("playerO  index= $i socre =$score");
-          }
-        }
-      }
-      return finalScore;
-    } else {
-      int index;
-      int finalScore = 10;
-      for (int i = 0; i < 9; i++) {
-        if (!(player.playerOMax.contains(i) || player.playerXMax.contains(i))) {
-          player.playerOMax.add(i);
-
-          int score = await minimax(depth - 1, true, isfirst: false);
-
-           player.playerOMax.removeLast();
-
-          if (score < finalScore) {
-            finalScore = score;
-            index=i;
-
-          }
-          if (isfirst) {
-            print("playerO  index= $i socre =$score");
-          }
-        }
-      }
-      return finalScore;
-    }
-  }
+  // static Future<int> minimax(int depth, bool isMaximizing, {bool isfirst = true}) async {
+  //   int result;
+  //   bool empty=false;
+  //
+  //   if (checkWinner(player.playerXMax, player.playerOMax) ==
+  //       "player X is Winner") {
+  //     result = 2;
+  //   } else if (checkWinner(player.playerXMax, player.playerOMax) ==
+  //       "player O is Winner") {
+  //     result = -2;
+  //   } else if (checkWinner(player.playerXMax, player.playerOMax) =="tie") {
+  //     result = 0;
+  //   } else {
+  //     result = 1;
+  //   }
+  //
+  //   if (result != 1 || depth == 0) {
+  //     return result;
+  //   }
+  //   if (isMaximizing) {
+  //     int finalScore = -10;
+  //     for (int i = 0; i < 9; i++) {
+  //       if (!(player.playerOMax.contains(i) || player.playerXMax.contains(i))) {
+  //         player.playerXMax.add(i);
+  //
+  //         int score = await minimax(depth - 1, false, isfirst: false);
+  //
+  //          player.playerXMax.removeLast();
+  //
+  //
+  //         if (score > finalScore) {
+  //           finalScore = score;
+  //         }
+  //
+  //         if (isfirst) {
+  //           print("playerO  index= $i socre =$score");
+  //         }
+  //       }
+  //     }
+  //     return finalScore;
+  //   } else {
+  //     int index;
+  //     int finalScore = 10;
+  //     for (int i = 0; i < 9; i++) {
+  //       if (!(player.playerOMax.contains(i) || player.playerXMax.contains(i))) {
+  //         player.playerOMax.add(i);
+  //
+  //         int score = await minimax(depth - 1, true, isfirst: false);
+  //
+  //          player.playerOMax.removeLast();
+  //
+  //         if (score < finalScore) {
+  //           finalScore = score;
+  //           index=i;
+  //
+  //         }
+  //         if (isfirst) {
+  //           print("playerO  index= $i socre =$score");
+  //         }
+  //       }
+  //     }
+  //     return finalScore;
+  //   }
+  // }
 }

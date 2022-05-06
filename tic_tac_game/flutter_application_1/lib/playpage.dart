@@ -196,12 +196,7 @@ class _playPage extends State {
 
 
     result = game.checkWinner(player.playerX,player.playerO);
-    // if (turn == 9) {
-    //   setState(() {
-    //     gameOver = true;
-    //   });
-    //   result = "Draw !";
-    // }
+
 
     if (result == "player O is Winner" || result == "player X is Winner"||result == "tie") {
       setState(() {
@@ -213,9 +208,5 @@ class _playPage extends State {
     }
 
   }
-  // updateState(){
-  //   setState(() {
-  //     activePlayer = activePlayer == "X" ? "O" : "X";
-  //   });
-  // }
+
 }
