@@ -167,7 +167,7 @@ class _playPage extends State {
               Navigator.of(ctx).pop();
             },
             child: const Text("replay"),
-          ),
+          ), 
         ],
       ),
     );
