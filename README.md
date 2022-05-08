@@ -47,8 +47,8 @@ Reason
 **Problem formulation**
 
 ```
-1.	Initial state: empty board.
-2. 	Successor function: Any remaining empty cell.
+1.  Initial state: empty board.
+2.  Successor function: Any remaining empty cell.
 3.  goal test:  Win the game or atleast draw.
 4.  path cost:  1 Tap on square
 
