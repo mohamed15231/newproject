@@ -54,7 +54,8 @@ class _playPage extends State {
 
 
           Text(
-            "Player $activePlayer ",
+            "Player $activePlayer "
+            ,
             style: const TextStyle(
               color: Colors.black,
               fontSize: 40.0,
