@@ -15,7 +15,7 @@ class Autoplay{
        game.play(7, "O");
      }
      int result;
-     // bool empty=false;
+
      late int index;
      if (game.checkWinner(player.playerXMax, player.playerOMax) ==
          "player X is Winner") {
@@ -33,7 +33,7 @@ class Autoplay{
        return result;
      }
      if (isMaximizing) {
-       int finalScore = -10;
+       int finalScore = -150;
        for (int i = 0; i < 9; i++) {
          if (!(player.playerOMax.contains(i) || player.playerXMax.contains(i))) {
            player.playerXMax.add(i);
@@ -53,7 +53,7 @@ class Autoplay{
        return finalScore;
      }
      else {
-       int finalScore = 10;
+       int finalScore = 150;
        for (int i = 0; i < 9; i++) {
          if (!(player.playerOMax.contains(i) || player.playerXMax.contains(i))) {
            player.playerOMax.add(i);

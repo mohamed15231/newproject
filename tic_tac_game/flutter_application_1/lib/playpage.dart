@@ -182,8 +182,6 @@ class _playPage extends State {
   });
 
   if(isSwitch==false&& gameOver==false){
-    turn++;
-
    await Autoplay.breadth_first_Search(-2, 0 );
    //  await Autoplay.Depth_first_Search(-2,0);
     setState(() {
