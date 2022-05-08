@@ -8,7 +8,8 @@ class Autoplay{
 
 
 
-   static Future<int> children(int depth, bool isMaximizing, {bool isfirst = true}) async {
+   static Future<int> children(int depth, bool isMaximizing, {bool isfirst = true}) async
+   {
 
      if (player.playerO.contains(1) & player.playerO.contains(4) && !player.playerX.contains(7) ) {
        game.play(7, "O");
@@ -79,9 +80,8 @@ class Autoplay{
        return finalScore;
      }
    }
-
-  static Future<void> breadth_first_Search(int goal,int goal1) async
-  {
+   static Future<void> breadth_first_Search(int goal,int goal1) async
+   {
     List queue =[];
     int initialstate=await children(100, false,isfirst: true);
     queue.add(initialstate);
