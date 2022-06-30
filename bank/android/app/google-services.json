@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "536277561627",
+    "project_id": "bank-dbfce",
+    "storage_bucket": "bank-dbfce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536277561627:android:7630986b038a01b8fb23be",
+        "android_client_info": {
+          "package_name": "com.example.bank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536277561627-7ra6equls67fkb6v0hp1lqgkvopporrb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8onXgvEQ0OWcf6WcIjT7uwgmA6VRglfM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536277561627-7ra6equls67fkb6v0hp1lqgkvopporrb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
